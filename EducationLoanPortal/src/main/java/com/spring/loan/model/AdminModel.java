@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class AdminModel {
 	   @Id
 		private String Email;
-		private String Password;
+		private String password;
 		private String MobileNumber;
 		private String UserRole;
 		public String getEmail() {
@@ -17,10 +17,10 @@ public class AdminModel {
 			Email = email;
 		}
 		public String getPassword() {
-			return Password;
+			return password;
 		}
 		public void setPassword(String password) {
-			Password = password;
+			this.password = password;
 		}
 		public String getMobileNumber() {
 			return MobileNumber;

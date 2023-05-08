@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class LoginModel {
 	@Id
 	private String Email;
-	private String Password;
+	private String password;
 	public String getEmail() {
 		return Email;
 	}
@@ -15,10 +15,10 @@ public class LoginModel {
 		Email = email;
 	}
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 
 

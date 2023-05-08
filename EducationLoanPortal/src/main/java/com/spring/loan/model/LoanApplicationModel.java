@@ -7,16 +7,6 @@ import jakarta.persistence.Id;
 public class LoanApplicationModel {
 	@Id
 	private int loanId;
-	private String loantype;
-	private	String applicantName;
-	private	String applicantAddress;
-	private	String applicantMobile;
-	private	String applicantEmail;
-	private String applicantAadhaar;
-	private String applicantPan;
-	private String applicantSalary;
-	private String loanAmountRequired;
-	private String loanRepaymentMonths;
 	public int getLoanId() {
 		return loanId;
 	}
@@ -83,5 +73,15 @@ public class LoanApplicationModel {
 	public void setLoanRepaymentMonths(String loanRepaymentMonths) {
 		this.loanRepaymentMonths = loanRepaymentMonths;
 	}
-
+	private String loantype;
+	private	String applicantName;
+	private	String applicantAddress;
+	private	String applicantMobile;
+	private	String applicantEmail;
+	private String applicantAadhaar;
+	private String applicantPan;
+	private String applicantSalary;
+	private String loanAmountRequired;
+	private String loanRepaymentMonths;
+	
 }

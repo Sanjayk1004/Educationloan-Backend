@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.spring.loan.model.AdminModel;
 import com.spring.loan.repository.AdminRepository;
 
+import jakarta.transaction.Transactional;
 @Service
 public class AdminService {
     @Autowired
@@ -26,9 +27,9 @@ public class AdminService {
      {
       return ar.saveAndFlush(amodel1);
      }
-     
+     @Transactional
      public void delete1(String password)
      {
-      ar.deleteById(password);
+      ar.deleteByPassword(password);
      }
 }

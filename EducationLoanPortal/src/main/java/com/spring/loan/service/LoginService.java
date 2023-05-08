@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.spring.loan.model.LoginModel;
 import com.spring.loan.repository.LoginRepository;
 
+import jakarta.transaction.Transactional;
 @Service
 public class LoginService {
 	
@@ -27,10 +28,10 @@ public class LoginService {
 	     {
 	      return lr.saveAndFlush(amodel5);
 	     }
-	     
+	     @Transactional
 	     public void delete3(String password)
 	     {
-	      lr.deleteById(password);
+	      lr.deleteByPassword(password);
 	     
       }
 }

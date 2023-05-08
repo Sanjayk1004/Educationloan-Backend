@@ -2,12 +2,14 @@ package com.spring.loan.service;
 
 import java.util.List;
 import java.util.Optional;
-import org.springframework.data.domain.Sort;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
+
 import com.spring.loan.model.LoanApplicationModel;
 import com.spring.loan.repository.LoanApplicationRepository;
 @Service
@@ -37,6 +39,7 @@ public class LoanApplicationService {
 		   e.setApplicantMobile(i.getApplicantMobile());
 		   e.setApplicantEmail(i.getApplicantEmail());
 		   e.setApplicantAadhaar(i.getApplicantAadhaar());
+		   e.setApplicantPan(i.getApplicantPan());
 		   e.setApplicantSalary(i.getApplicantSalary());
 		   e.setLoanAmountRequired(i.getLoanAmountRequired());
 		   e.setLoanRepaymentMonths(i.getLoanRepaymentMonths());
