@@ -1,0 +1,28 @@
+package com.spring.loan.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.loan.model.LoanApplicationModel;
+import com.spring.loan.service.LoanApplicationService;
+
+@RestController
+public class LoanApplicationController {
+	
+	@Autowired
+	LoanApplicationService ls;
+	@PostMapping("loan/save")
+	public LoanApplicationModel saveinfo(@RequestBody LoanApplicationModel l)
+	{
+		return ls.createnew(l);
+	}
+	@GetMapping("loan/get")
+	public LoanApplicationModel getloan(@RequestBody LoanApplicationModel l)
+	{
+		return ls.getloandetails(l);
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.spring.loan.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.loan.model.LoanApplicationModel;
+import com.spring.loan.repository.LoanApplicationRepository;
+
+@Service
+public class LoanApplicationService {
+	@Autowired
+	LoanApplicationRepository lr;
+	public LoanApplicationModel createnew(LoanApplicationModel l)
+	{
+		return lr.save(l);
+	}
+    public LoanApplicationModel getloandetails()
+    {
+    	return lr.findAll();
+    }
+}

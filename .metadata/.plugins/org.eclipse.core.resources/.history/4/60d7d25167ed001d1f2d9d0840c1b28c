@@ -1,0 +1,20 @@
+package com.spring.loan.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.spring.loan.model.LoginModel;
+import com.spring.loan.repository.LoginRepository;
+
+@Service
+public class LoginService {
+	
+	@Autowired
+	LoginRepository lr;
+	public LoginModel savelogin(@RequestBody LoginModel l)
+	{
+		return lr.save(l);
+	}
+
+}

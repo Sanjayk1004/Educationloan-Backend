@@ -1,0 +1,5 @@
+package com.spring.loan.repository;
+
+public interface UserRepository {
+
+}

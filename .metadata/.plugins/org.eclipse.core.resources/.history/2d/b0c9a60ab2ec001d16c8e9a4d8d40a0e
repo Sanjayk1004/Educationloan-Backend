@@ -1,0 +1,5 @@
+package com.spring.loan.model;
+
+public class AdminModel {
+
+}
